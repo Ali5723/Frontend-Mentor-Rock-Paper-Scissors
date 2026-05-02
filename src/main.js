@@ -30,7 +30,8 @@ document.querySelectorAll(".main .choose .chooseItem").forEach((selector) => {
       const chosenType = selector.querySelector("img").alt;
       const theImg = document.querySelector(".main .game .user .image img");
 
-      theImg.src = `/images/icon-${chosenType}.svg`;
+      // theImg.src = `/images/icon-${chosenType}.svg`;
+      theImg.src = `./images/icon-${chosenType}.svg`;
       theImg.alt = chosenType;
 
       document.querySelector(".game .user .image").append(theImg);
@@ -52,7 +53,8 @@ document.querySelectorAll(".main .choose .chooseItem").forEach((selector) => {
           .classList.add(houseChoice);
 
         const theImg = document.querySelector(".game .house .image img");
-        theImg.src = `/images/icon-${houseChoice}.svg`;
+        // theImg.src = `/images/icon-${houseChoice}.svg`;
+        theImg.src = `./images/icon-${houseChoice}.svg`;
         theImg.alt = houseChoice;
 
         const theResult =

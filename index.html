@@ -1,22 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
-</head>
-<body>
-  Score
-  Rules
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="./src/styles/normalize.css" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="/images/logo.svg" alt="logo" class="logo" />
+      <div class="score">
+        <h2>Score</h2>
+        <p id="scoreDisplay">0</p>
+      </div>
+    </div>
 
-  You Picked
-  The House Picked
+    <div class="main">
+      <div class="choose"></div>
+      <div class="game hidden">
+        <div class="user">
+          <div class="image"></div>
+          <p class="text">You Picked</p>
+        </div>
+        <div class="house">
+          <div class="image"></div>
+          <p class="text">The House Picked</p>
+        </div>
+        <div class="result">
+          <h2 id="winTitle">You Win</h2>
+          <h2 id="loseTitle">You Lose</h2>
+          <button id="playAgainButton">Play Again</button>
+        </div>
+      </div>
+    </div>
 
-  You Win
-  You Lose
+    <div class="footer">
+      <button class="rules" id="rulesButton">Rules</button>
+    </div>
 
-  Play Again
-</body>
+    <script type="module" src="./src/main.js"></script>
+  </body>
 </html>

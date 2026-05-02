@@ -26,7 +26,7 @@ document.querySelectorAll(".main .choose .chooseItem").forEach((selector) => {
       theImg.alt = "";
     });
 
-    const theGame = new Promise((resolveFunction, rejectFunction) => {
+    const theGame = new Promise(async (resolveFunction, rejectFunction) => {
       const chosenType = selector.querySelector("img").alt;
       const theImg = document.querySelector(".main .game .user .image img");
 
@@ -39,8 +39,9 @@ document.querySelectorAll(".main .choose .chooseItem").forEach((selector) => {
 
       document.querySelector(".main .choose").classList.toggle("hidden");
       document.querySelector(".main .game").classList.toggle("hidden");
-
-      resolveFunction(chosenType);
+      await setTimeout((e) => {
+        resolveFunction(chosenType);
+      }, 1000);
     })
       .then((userChoice) => {
         const userChoiceNumber = theTypes.indexOf(userChoice);
@@ -66,7 +67,7 @@ document.querySelectorAll(".main .choose .chooseItem").forEach((selector) => {
         return { win: theResult, draw: isDraw };
       })
       .then((theResult) => {
-        document.querySelector(".main .result").classList.remove("hidden");
+        document.querySelector(".main .result").classList.remove("visHidden");
         const resultTitle = document.getElementById("resultTitle");
         if (theResult.draw) {
           resultTitle.innerText = "Draw";
@@ -98,7 +99,7 @@ document.getElementById("scoreDisplay").addEventListener("dblclick", (e) => {
 });
 
 document.getElementById("playAgainButton").addEventListener("click", (e) => {
-  document.querySelector(".main .result").classList.add("hidden");
+  document.querySelector(".main .result").classList.add("visHidden");
   document.querySelector(".main .game").classList.add("hidden");
   document.querySelector(".main .choose").classList.remove("hidden");
 });

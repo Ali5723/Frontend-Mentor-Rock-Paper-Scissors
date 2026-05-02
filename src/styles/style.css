@@ -51,6 +51,9 @@
 .hidden {
   display: none !important;
 }
+.visHidden {
+  opacity: 0;
+}
 
 .itemsContainer .item {
   width: 100px;
@@ -318,6 +321,7 @@ body {
 .main .game .house .image {
   border-color: transparent;
   background-color: #00000033;
+  transition: 300ms;
 }
 /* .main .game .user .text,
 .main .game .house .text { */

@@ -23,7 +23,18 @@
     </div>
 
     <div class="main">
-      <div class="choose"></div>
+      <div class="choose">
+        <div class="chooseItem">
+          <img src="/images/icon-paper.svg" alt="paper" />
+        </div>
+        <div class="chooseItem">
+          <img src="/images/icon-scissors.svg" alt="scissors" />
+        </div>
+        <div class="chooseItem">
+          <img src="/images/icon-rock.svg" alt="rock" />
+        </div>
+        <img class="triangle" src="/images/bg-triangle.svg" alt="triangle">
+      </div>
       <div class="game hidden">
         <div class="user">
           <div class="image"></div>
@@ -42,9 +53,15 @@
     </div>
 
     <div class="footer">
-      <button class="rules" id="rulesButton">Rules</button>
+      <button id="rulesButton">Rules</button>
+      <div class="overlay hidden"></div>
+      <div class="rules hidden">
+        <h2>Rules</h2>
+        <img class="rulesImage" src="/images/image-rules.svg" alt="rules" />
+        <img class="closeButton" src="/images/icon-close.svg" alt="close" />
+      </div>
     </div>
 
-    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/main.js" defer></script>
   </body>
 </html>

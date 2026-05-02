@@ -23,32 +23,35 @@
     </div>
 
     <div class="main">
-      <div class="choose">
-        <div class="chooseItem">
+      <div class="choose itemsContainer">
+        <div class="chooseItem item paper">
           <img src="/images/icon-paper.svg" alt="paper" />
         </div>
-        <div class="chooseItem">
+        <div class="chooseItem item scissors">
           <img src="/images/icon-scissors.svg" alt="scissors" />
         </div>
-        <div class="chooseItem">
+        <div class="chooseItem item rock">
           <img src="/images/icon-rock.svg" alt="rock" />
         </div>
-        <img class="triangle" src="/images/bg-triangle.svg" alt="triangle">
+        <img class="triangle" src="/images/bg-triangle.svg" alt="triangle" />
       </div>
-      <div class="game hidden">
+      <div class="game itemsContainer hidden">
         <div class="user">
-          <div class="image"></div>
+          <div class="image item">
+            <img src="" alt="" />
+          </div>
           <p class="text">You Picked</p>
         </div>
         <div class="house">
-          <div class="image"></div>
+          <div class="image item">
+            <img src="" alt="" />
+          </div>
           <p class="text">The House Picked</p>
         </div>
-        <div class="result">
-          <h2 id="winTitle">You Win</h2>
-          <h2 id="loseTitle">You Lose</h2>
-          <button id="playAgainButton">Play Again</button>
-        </div>
+      </div>
+      <div class="result hidden">
+        <h2 id="resultTitle"></h2>
+        <button id="playAgainButton">Play Again</button>
       </div>
     </div>
 
